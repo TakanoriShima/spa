@@ -16,6 +16,13 @@ const getTasks = () => {
 onMounted(() => {
     getTasks();
 });
+
+const deleteTask = (id) => {
+    axios.delete('/api/tasks/' + id)
+    .then((res) => {
+        getTasks();
+    });
+}
                 
 </script>
 <template>
@@ -49,7 +56,7 @@ onMounted(() => {
                     </router-link>
                 </td>
                 <td>
-                <button class="btn btn-danger">Delete</button>
+                <button class="btn btn-danger" v-on:click="deleteTask(task.id)">Delete</button>
                 </td>
             </tr>
         </tbody>
