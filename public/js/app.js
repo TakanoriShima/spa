@@ -23614,6 +23614,9 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 var routes = [{
+  path: '/',
+  component: _components_TaskListComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
+}, {
   path: '/tasks',
   name: 'task.list',
   component: _components_TaskListComponent__WEBPACK_IMPORTED_MODULE_2__["default"]
